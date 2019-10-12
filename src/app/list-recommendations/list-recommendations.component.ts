@@ -16,6 +16,7 @@ import { User } from './user';
     ])
   ]
 })
+
 export class ListRecommendationsComponent implements OnInit {
 
   public users: User[] = [
@@ -24,10 +25,8 @@ export class ListRecommendationsComponent implements OnInit {
   ];
   public index = 0;
   @Input()
-  parentSubject: Subject<any>;
-
-
-
+  parentSubject: Subject<any> = new Subject();
+  
   animationState: string;
   constructor() { }
 
@@ -47,7 +46,6 @@ export class ListRecommendationsComponent implements OnInit {
     this.animationState = '';
     this.index++;
   }
-
 
   ngOnDestroy() {
     this.parentSubject.unsubscribe();
