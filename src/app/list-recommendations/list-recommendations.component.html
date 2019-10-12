@@ -1,1 +1,27 @@
-<p>list-recommendations works!</p>
+<div class="tphoto"
+[@cardAnimator]="animationState"
+(@cardAnimator.done)="resetAnimationState($event)"
+(swipeleft)='startAnimation("swipeleft")' 
+(swiperight)='startAnimation("swiperight")'
+>
+<div class="tbg">
+    <div class="theader">
+        <img class="tlogo" src="assets/images/Logo guatajaus.png" alt="Guatajaus Logo" title="Guatajaus Logo" />
+        <img class="title title-center" src="assets/flaticons/GUATAJAUS.png"  alt="Guatajaus Text" title="Guatajaus Text" />
+    </div>
+    <div class="tbgwrap">
+      <div class="tphoto">
+        <img src="assets/images/gengar.jpg" class="center" title="tphoto" alt="Tinder Photo"/>
+      </div>
+      <div class="tbeds"></div>
+      <div class="tsurface"></div>
+      <div class="twc"></div>
+      <div class="tname prize">Tita</div>
+      <div class="tcontrols_right">
+        <div class="tyes"><img  class="center_decision_btn" src="assets/flaticons/like.svg"/></div>
+      </div>
+      <div class="tcontrols_left">
+        <div class="tno"><img  class="center_decision_btn" src="assets/flaticons/error.svg"/></div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,147 @@
+/************************
+Tinder Template by Miami
+************************/
+.tbg {
+    height: 720px;
+    width: 400px;
+    background-color: #fff;
+    margin: 0 auto;
+    border: 1px solid #c0c0c0;
+}
+.tbgwrap { padding: 10px; }
+.theader { height: 13%; border-bottom: 1px solid #c0c0c0; }
+
+.tlogo { 
+    width: 18%; 
+    margin: 0 auto;
+    padding: 10px;
+    float: left; 
+    }
+.tlogo img { width: 100%; }
+.tphoto {
+    width: 75%;
+    height: 75%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    top: 15px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border: 1px solid #c0c0c0;
+    padding-bottom: 60px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #c0c0c0;
+    margin-bottom: 5%;
+    padding-top: 5%;
+}
+.ng-tns-c1-0{
+    margin-top:5%;
+    margin-bottom:5%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80%;
+}
+
+.title{
+    margin: 5 auto;
+    padding-right: 5%;
+    padding-top:8%;
+    width: 60%;
+}
+
+.title-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.center_decision_btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height:100%;
+}
+.tphoto img {}
+.tname {
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Helvetica', sans-serif;
+    float: left;
+}
+.tname .age { font-weight: 200; }
+.tinfo { font-family: 'Helvetica', sans-serif; }
+.tinfo .fa-users, .tinfo .fa-book {
+    color: #c0c0c0;
+    float: right;
+    position: relative;
+    font-size: 24px;
+    padding: 12px;
+}
+.tcontrols_left {
+    width:50%;
+    float:left;
+}
+.tcontrols_right {
+    width:50%;
+    float:right;
+}
+
+.tno {
+    background-color: #fff;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    left: 5%;
+    border: 10px solid #f0f0f0;
+}
+
+.tyes {
+    background-color: #fff;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    top: 48px;
+    left: 10%;
+    border: 10px solid #f0f0f0;
+}
+
+.credit {
+    width: 400px;
+    height: auto;
+    position: relative;
+    top: 60px;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 2px 0px;
+}
+.credit a {
+    font-size: 7px;
+    letter-spacing: 5px;
+    color: #c0c0c0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Helvetica', sans-serif;
+    font-style: italic;
+}
