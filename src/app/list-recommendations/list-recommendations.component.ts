@@ -49,7 +49,7 @@ export class ListRecommendationsComponent implements OnInit {
   ngOnDestroy() {
     this.parentSubject.unsubscribe();
   }
-  
+
   cardAnimation(value) {
     this.parentSubject.next(value);
   }
