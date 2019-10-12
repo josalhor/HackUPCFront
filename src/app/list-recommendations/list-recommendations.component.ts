@@ -1,9 +1,9 @@
+import {ApiSession, ApiSessionService, RealEstate} from './api-session.service';
 import { Component, OnInit, Input } from '@angular/core';
-import { trigger, keyframes, animate, transition } from "@angular/animations";
+import { trigger, keyframes, animate, transition } from '@angular/animations';
 import * as kf from './keyframes';
 import { Subject } from 'rxjs';
 import { User } from './user';
-
 
 @Component({
   selector: 'app-list-recommendations',
@@ -17,22 +17,28 @@ import { User } from './user';
   ]
 })
 
-export class ListRecommendationsComponent implements OnInit {  
+export class ListRecommendationsComponent implements OnInit {
   public users: User[] = [
-    {id: 1, picture: "guatajaus/src/guatajaus/src/assets/images/Logo guatajaus.pngassets/images/Logo guatajaus.png", age: 22, name:"Catalina", gender: "female"},
-    {id: 2, picture: "guatajaus/src/assets/images/gengar.jpg", age: 44, name:"Nigerian", gender: "male"}
+    {id: 1, picture: 'guatajaus/src/guatajaus/src/assets/images/Logo guatajaus.pngassets/images/Logo guatajaus.png', age: 22, name: 'Catalina', gender: 'female'},
+    {id: 2, picture: 'guatajaus/src/assets/images/gengar.jpg', age: 44, name: 'Nigerian', gender: 'male'}
   ];
   public index = 0;
+  public apiSession: ApiSession;
+  private email: string;
+
   @Input()
   parentSubject: Subject<any> = new Subject();
-  
+
   animationState: string;
-  constructor() { }
+  constructor(private sessionService: ApiSessionService) { }
 
   ngOnInit() {
     this.parentSubject.subscribe(event => {
-      this.startAnimation(event)
+      this.startAnimation(event);
     });
+    // TODO: fetch the email from the url and call getSession
+    this.email = 'HOLAJOSEP@gmail.com';
+    this.getSession();
   }
 
   startAnimation(state) {
@@ -52,5 +58,23 @@ export class ListRecommendationsComponent implements OnInit {
 
   cardAnimation(value) {
     this.parentSubject.next(value);
+  }
+
+  getSession() {
+    this.sessionService.getApiSession(this.email).subscribe(
+      (data: ApiSession) => {
+        this.apiSession = data;
+      },
+      err => console.error(err),
+      () => console.log('done loading session')
+    );
+  }
+
+  isSessionReady(): boolean {
+    return this.apiSession.status === 'completed';
+  }
+
+  getRecommendations(): [RealEstate] {
+    return this.apiSession.recommendations;
   }
 }
