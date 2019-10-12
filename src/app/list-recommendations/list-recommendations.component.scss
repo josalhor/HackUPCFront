@@ -10,24 +10,14 @@ Tinder Template by Miami
 }
 .tbgwrap { padding: 10px; }
 .theader { height: 13%; border-bottom: 1px solid #c0c0c0; }
-.theader i.fa-comments {
-    color: #c0c0c0;
-    font-size: 40px;
-    display: inline-block;
-    float: right;
-    padding: 10px 20px;
-    position: relative;
-}
-.theader i.fa-cog {
-    color: #c0c0c0;
-    font-size: 40px;
-    display: inline-block;
-    float: left;
-    padding: 10px 20px;
-    position: relative;
-}
-.tlogo { width: 100px; margin: 0 auto; padding: 10px; }
-.tlogo img { width: 60px; }
+
+.tlogo { 
+    width: 18%; 
+    margin: 0 auto;
+    padding: 10px;
+    float: left; 
+    }
+.tlogo img { width: 100%; }
 .tphoto {
     width: 75%;
     height: 75%;
@@ -55,36 +45,31 @@ Tinder Template by Miami
     width: 80%;
     height: 80%;
 }
+
+.title{
+    margin: 5 auto;
+    padding-right: 5%;
+    padding-top:8%;
+    width: 60%;
+}
+
+.title-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
 }
 
-/*
-.ti {
-    background-color: #fff;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -o-border-radius: 50%;
-    -ms-border-radius: 50%;
-    position: relative;
-    display: inline-block;
-    left: 12px;
-    top: 30px;
-    border: 10px solid #f0f0f0;
-}
-.ti .fa-info {
-    font-size: 23px;
-    padding: 15px 20px;
-    color: #398beb;
-}*/
-
-.button_img {
-    width:100%;
+.center_decision_btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
     height:100%;
 }
 .tphoto img {}
@@ -103,7 +88,15 @@ Tinder Template by Miami
     font-size: 24px;
     padding: 12px;
 }
-.tcontrols {}
+.tcontrols_left {
+    width:50%;
+    float:left;
+}
+.tcontrols_right {
+    width:50%;
+    float:right;
+}
+
 .tno {
     background-color: #fff;
     height: 120px;
@@ -114,14 +107,9 @@ Tinder Template by Miami
     -ms-border-radius: 50%;
     position: relative;
     display: inline-block;
-    top: 50px;
-    left: 25px;
+    top: 0px;
+    left: 5%;
     border: 10px solid #f0f0f0;
-}
-.tno i {
-    color: #ff695b;
-    font-size: 80px;
-    padding: 17px 28px;
 }
 
 .tyes {
@@ -135,14 +123,10 @@ Tinder Template by Miami
     position: relative;
     display: inline-block;
     top: 48px;
-    left: 0px;
+    left: 10%;
     border: 10px solid #f0f0f0;
 }
-.tyes i {
-    color: #5de19c;
-    font-size: 60px;
-    padding: 35px 30px;
-}
+
 .credit {
     width: 400px;
     height: auto;
