@@ -1,1 +1,32 @@
-<p>list-recommendations works!</p>
+<div class="tphoto"
+[@cardAnimator]="animationState"
+(@cardAnimator.done)="resetAnimationState($event)"
+(swipeleft)='startAnimation("swipeleft")' 
+(swiperight)='startAnimation("swiperight")'
+>
+<div class="tbg">
+    <div class="theader">
+        <img class="tlogo" src="assets/images/Logo guatajaus.png" alt="Guatajaus Logo" title="Guatajaus Logo" />
+        <img class="title title-center" src="assets/flaticons/GUATAJAUS.png"  alt="Guatajaus Text" title="Guatajaus Text" />
+    </div>
+    <div class="tbgwrap">
+      <div class="tphoto">
+        <img src="assets/images/gengar.jpg" class="center" title="tphoto" alt="Guatajaus Photo"/>
+        <div class="tbed little-icons-center">
+          <img src="assets/logos_btn/bed.svg" width="20" height="20" /> <p class="tbed-text" style="margin-right:16%;"><!-- num of beds--> 2</p>
+          <img src="assets/logos_btn/wc-sign.svg" width="20" height="20"/> <p class="tbed-text"><!-- num of beds--> 1</p>
+        </div>
+        <div class="tbed">
+            <img src="assets/logos_btn/squareMeters.png" width="20" height="20"/> <p class="tbed-text"><!-- num of beds--> 50 - 100</p>
+            <img src="assets/logos_btn/dollar.svg" width="20" height="20"/> <p class="tbed-text"><!-- num of beds--> 1000</p>
+        </div>
+        </div>
+      </div>
+      <div class="tcontrols_right">
+        <div (click)='cardAnimation("swiperight")' class="tyes"><img class=" shakeit center_decision_btn" src="assets/flaticons/like.svg"/></div>
+      </div>
+      <div class="tcontrols_left">
+        <div (click)='cardAnimation("swipeleft")' class="tno"><img class=" shakeit center_decision_btn" src="assets/flaticons/error.svg"/></div>
+      </div>
+    </div>
+  </div>
