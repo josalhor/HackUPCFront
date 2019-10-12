@@ -1,1 +1,23 @@
-<p>list-recommendations works!</p>
+<div class="tphoto"
+[@cardAnimator]="animationState"
+(@cardAnimator.done)="resetAnimationState($event)"
+(swipeleft)='startAnimation("swipeleft")' 
+(swiperight)='startAnimation("swiperight")'
+>
+<div class="tbg">
+    <div class="theader">
+      <div class="tlogo">
+        <img src="assets/images/Logo guatajaus.png" alt="Guatajaus Logo" title="Guatajaus Logo" width="20" height="40"/>
+      </div>
+    </div>
+    <div class="tbgwrap">
+      <div class="tphoto">
+        <img src="assets/images/gengar.jpg" class="center" title="tphoto" alt="Tinder Photo"/>
+      </div>
+      <div class="tname">Jane Doe, <span class="age">27</span></div>
+      <div class="tcontrols">
+        <div class="tno"><img  class="button_img" src="assets/flaticons/error.svg"/></div>
+        <div class="tyes"><img  class="button_img" src="assets/flaticons/error.svg"/></div>
+      </div>
+    </div>
+  </div>
