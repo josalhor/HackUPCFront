@@ -17,8 +17,7 @@ import { User } from './user';
   ]
 })
 
-export class ListRecommendationsComponent implements OnInit {
-
+export class ListRecommendationsComponent implements OnInit {  
   public users: User[] = [
     {id: 1, picture: "guatajaus/src/guatajaus/src/assets/images/Logo guatajaus.pngassets/images/Logo guatajaus.png", age: 22, name:"Catalina", gender: "female"},
     {id: 2, picture: "guatajaus/src/assets/images/gengar.jpg", age: 44, name:"Nigerian", gender: "male"}
@@ -50,5 +49,8 @@ export class ListRecommendationsComponent implements OnInit {
   ngOnDestroy() {
     this.parentSubject.unsubscribe();
   }
-
+  
+  cardAnimation(value) {
+    this.parentSubject.next(value);
+  }
 }

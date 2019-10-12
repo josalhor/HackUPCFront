@@ -8,14 +8,9 @@ import { Subject } from 'rxjs';
 })
 export class AppComponent {
   title = 'guatajaus';
-  parentSubject: Subject<string> = new Subject();
 
   constructor() {
 
-  }
-
- cardAnimation(value) {
-    this.parentSubject.next(value);
   }
 
 }
