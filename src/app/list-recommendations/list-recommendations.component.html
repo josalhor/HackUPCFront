@@ -11,7 +11,7 @@
     </div>
     <div class="tbgwrap">
       <div class="tphoto" style="background-color:lightgrey;">
-        <img src="assets/images/gengar.jpg" class="center" title="tphoto" alt="Guatajaus Photo"/>
+        <img src="{{current.images[0].image}}" class="center" title="tphoto" alt="Guatajaus Photo"/>
         <div class="tbed little-icons-center">
           <img src="assets/logos_btn/bed.svg" width="20" height="20" /> <p class="tbed-text" style="margin-right:36%;">{{ current.rooms }}</p>
           <img src="assets/logos_btn/wc-sign.svg" width="20" height="20"/> <p class="tbed-text">{{ current.bathrooms }}</p>
@@ -22,10 +22,10 @@
         </div>
       </div>
       <div class="tcontrols_right">
-        <div (click)='cardAnimation("swiperight")' class="tyes"><img class=" shakeit center_decision_btn" src="assets/flaticons/like.svg"/></div>
+        <div (click)='cardAnimation("swiperight"); nextRecommendation();' class="tyes"><img class=" shakeit center_decision_btn" src="assets/flaticons/like.svg"/></div>
       </div>
       <div class="tcontrols_left">
-        <div (click)='cardAnimation("swipeleft")' class="tno"><img class=" shakeit center_decision_btn" src="assets/flaticons/error.svg"/></div>
+        <div (click)='cardAnimation("swipeleft"); nextRecommendation();' class="tno"><img class=" shakeit center_decision_btn" src="assets/flaticons/error.svg"/></div>
       </div>
     </div>
   </div>

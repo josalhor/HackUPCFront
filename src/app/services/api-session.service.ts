@@ -6,6 +6,11 @@ const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 
+export interface RealEstateImages {
+  image: string;
+}
+
+
 export interface RealEstate {
   id: number;
   promotionId: number;
@@ -15,6 +20,7 @@ export interface RealEstate {
   location: string;
   latitude: number;
   longitude: number;
+  images: [RealEstateImages];
 }
 
 export interface ApiSession {
