@@ -1,9 +1,11 @@
-import {ApiSession, ApiSessionService, RealEstate} from './api-session.service';
+import {ApiSession, ApiSessionService, RealEstate} from '../services/api-session.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, keyframes, animate, transition } from '@angular/animations';
 import * as kf from './keyframes';
 import { Subject } from 'rxjs';
 import { User } from './user';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-list-recommendations',
@@ -30,15 +32,13 @@ export class ListRecommendationsComponent implements OnInit {
   parentSubject: Subject<any> = new Subject();
 
   animationState: string;
-  constructor(private sessionService: ApiSessionService) { }
+  constructor(private sessionService: ApiSessionService, private router:Router) { }
 
   ngOnInit() {
+    console.log(this.router.url)
     this.parentSubject.subscribe(event => {
       this.startAnimation(event);
     });
-    // TODO: fetch the email from the url and call getSession
-    this.email = 'HOLAJOSEP@gmail.com';
-    this.getSession();
   }
 
   startAnimation(state) {
@@ -70,11 +70,5 @@ export class ListRecommendationsComponent implements OnInit {
     );
   }
 
-  isSessionReady(): boolean {
-    return this.apiSession.status === 'completed';
-  }
 
-  getRecommendations(): [RealEstate] {
-    return this.apiSession.recommendations;
-  }
 }
