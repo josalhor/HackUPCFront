@@ -13,12 +13,11 @@
       <div class="tphoto" style="background-color:lightgrey;">
         <img src="assets/images/gengar.jpg" class="center" title="tphoto" alt="Guatajaus Photo"/>
         <div class="tbed little-icons-center">
-          <img src="assets/logos_btn/bed.svg" width="20" height="20" /> <p class="tbed-text" style="margin-right:36%;"><!-- num of beds--> 2</p>
-          <img src="assets/logos_btn/wc-sign.svg" width="20" height="20"/> <p class="tbed-text"><!-- num of beds--> 1</p>
+          <img src="assets/logos_btn/bed.svg" width="20" height="20" /> <p class="tbed-text" style="margin-right:36%;">{{ current.rooms }}</p>
+          <img src="assets/logos_btn/wc-sign.svg" width="20" height="20"/> <p class="tbed-text">{{ current.bathrooms }}</p>
         </div>
         <div class="tbed">
-            <img src="assets/logos_btn/squareMeters.png" width="20" height="20" style="margin-left: 15%;"/> <p class="tbed-text"><!-- num of beds--> 50 - 100</p>
-            <img src="assets/logos_btn/dollar.svg" width="20" height="20"/> <p class="tbed-text"><!-- num of beds--> 1000</p>
+            <img src="assets/logos_btn/squareMeters.png" width="20" height="20"/> <p class="tbed-text">{{ current.surface }}</p>
         </div>
         </div>
       </div>

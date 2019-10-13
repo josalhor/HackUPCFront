@@ -26,20 +26,21 @@ export class ListRecommendationsComponent implements OnInit {
   ];
   public index = 0;
   public apiSession: ApiSession;
-  private email: string;
+  public current: RealEstate;
 
   @Input()
   parentSubject: Subject<any> = new Subject();
 
   animationState: string;
-  constructor(private sessionService: ApiSessionService, private router:Router) { }
+  constructor(private sessionService: ApiSessionService) { }
 
   ngOnInit() {
-    console.log(this.router.url)
     this.parentSubject.subscribe(event => {
       this.startAnimation(event);
     });
-  }
+    this.apiSession = this.sessionService.getApiInfo();
+    this.nextRecommendation();
+    }
 
   startAnimation(state) {
     if (!this.animationState) {
@@ -60,15 +61,8 @@ export class ListRecommendationsComponent implements OnInit {
     this.parentSubject.next(value);
   }
 
-  getSession() {
-    this.sessionService.getApiSession(this.email).subscribe(
-      (data: ApiSession) => {
-        this.apiSession = data;
-      },
-      err => console.error(err),
-      () => console.log('done loading session')
-    );
+  nextRecommendation(){
+    this.current = this.apiSession.recommendations.pop();
+    console.log(this.current.id);
   }
-
-
 }

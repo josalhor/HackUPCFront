@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./loading.component.scss']
 })
 export class LoadingComponent implements OnInit {
-  private time: number = 15000;
+  private time: number = 5000;
   public apiSession: ApiSession;
   constructor(private spinner: NgxSpinnerService, 
               private api: ApiSessionService,
@@ -26,22 +26,18 @@ export class LoadingComponent implements OnInit {
     })
     /** spinner starts on init */
     this.spinner.show();
-    setInterval(() => {
-      // spinner ends after 5 seconds 
-      if(this.api.isSessionReady()){
-        clearInterval();
-        this.spinner.hide();
-        this.router.navigate(['recommender']);
-      }
-    }, this.time);
   }
 
   getSession(email: string){
     this.api.getApiSession(email).subscribe((data: ApiSession) => {
       this.api.setApiSession(data);
+      if(this.api.isSessionReady()){
+        this.spinner.hide();
+        this.router.navigate(['recommender']);
+      }
     },
     err => console.error(err),
-    () => console.log('done loading session: ' + this.api.getApiInfo().status));
+    () => console.log('done loading session: ' + this.api.getApiInfo().email));
   }
 
 
