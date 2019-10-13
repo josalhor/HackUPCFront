@@ -11,14 +11,15 @@
     </div>
     <div class="tbgwrap">
       <div class="tphoto" style="background-color:lightgrey;">
-        <img src="{{current.images[0].image}}" class="center" title="tphoto" alt="Guatajaus Photo"/>
+        <img src="{{current.images[0].image}}" style="height: 280px;" class="center" title="tphoto" alt="Guatajaus Photo"/>
         <div class="tbed little-icons-center">
-          <img src="assets/logos_btn/bed.svg" width="20" height="20" /> <p class="tbed-text" style="margin-right:36%;">{{ current.rooms }}</p>
-          <img src="assets/logos_btn/wc-sign.svg" width="20" height="20"/> <p class="tbed-text">{{ current.bathrooms }}</p>
+          <img src="/assets/logos_btn/bed.svg" width="20" height="20" /> <p class="tbed-text" style="margin-right:36%;">{{ current.rooms }}</p>
+          <img src="assets/logos_btn/wc-sign.svg" width="20" height="20"/> <p class="tbed-text"> 1 </p>
         </div>
         <div class="tbed">
-            <img src="assets/logos_btn/squareMeters.png" width="20" height="20"/> <p class="tbed-text">{{ current.surface }}</p>
-        </div>
+            <img src="assets/logos_btn/squareMeters.png" width="20" height="20"/> <p class="tbed-text" style="margin-right: 2px;">{{ current.surface }}</p>
+            <img src="assets/logos_btn/map-placeholder.svg" width="20" height="20"/> <p style="font-size: 7px;" class="tbed-text">{{ current.latitude }}, {{ current.longitude }}</p>
+          </div>
         </div>
       </div>
       <div class="tcontrols_right">

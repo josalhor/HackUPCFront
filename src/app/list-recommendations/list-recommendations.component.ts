@@ -63,6 +63,6 @@ export class ListRecommendationsComponent implements OnInit {
 
   nextRecommendation(){
     this.current = this.apiSession.recommendations.pop();
-    console.log(this.current.id);
+    console.log(this.current.latitude);
   }
 }
