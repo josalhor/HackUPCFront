@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +7,12 @@ import { Subject } from 'rxjs';
 })
 export class AppComponent {
   title = 'guatajaus';
-  parentSubject: Subject<string> = new Subject();
 
   constructor() {
 
   }
 
- cardAnimation(value) {
-    this.parentSubject.next(value);
+  ngOnInit() {
   }
 
 }

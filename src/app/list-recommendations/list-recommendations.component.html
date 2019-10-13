@@ -10,18 +10,23 @@
         <img class="title title-center" src="assets/flaticons/GUATAJAUS.png"  alt="Guatajaus Text" title="Guatajaus Text" />
     </div>
     <div class="tbgwrap">
-      <div class="tphoto">
-        <img src="assets/images/gengar.jpg" class="center" title="tphoto" alt="Tinder Photo"/>
+      <div class="tphoto" style="background-color:lightgrey;">
+        <img src="{{current.images[0].image}}" style="height: 280px;" class="center" title="tphoto" alt="Guatajaus Photo"/>
+        <div class="tbed little-icons-center">
+          <img src="/assets/logos_btn/bed.svg" width="20" height="20" /> <p class="tbed-text" style="margin-right:36%;">{{ current.rooms }}</p>
+          <img src="assets/logos_btn/wc-sign.svg" width="20" height="20"/> <p class="tbed-text"> 1 </p>
+        </div>
+        <div class="tbed">
+            <img src="assets/logos_btn/squareMeters.png" width="20" height="20"/> <p class="tbed-text" style="margin-right: 2px;">{{ current.surface }}</p>
+            <img src="assets/logos_btn/map-placeholder.svg" width="20" height="20"/> <p style="font-size: 7px;" class="tbed-text">{{ current.latitude }}, {{ current.longitude }}</p>
+          </div>
+        </div>
       </div>
-      <div class="tbeds"></div>
-      <div class="tsurface"></div>
-      <div class="twc"></div>
-      <div class="tname prize">Tita</div>
       <div class="tcontrols_right">
-        <div class="tyes"><img  class="center_decision_btn" src="assets/flaticons/like.svg"/></div>
+        <div (click)='cardAnimation("swiperight"); nextRecommendation();' class="tyes"><img class=" shakeit center_decision_btn" src="assets/flaticons/like.svg"/></div>
       </div>
       <div class="tcontrols_left">
-        <div class="tno"><img  class="center_decision_btn" src="assets/flaticons/error.svg"/></div>
+        <div (click)='cardAnimation("swipeleft"); nextRecommendation();' class="tno"><img class=" shakeit center_decision_btn" src="assets/flaticons/error.svg"/></div>
       </div>
     </div>
   </div>
